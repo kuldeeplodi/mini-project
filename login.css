@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppin", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 10vw;
+  background: url("image.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 80px;
+  padding: 0 3vw;
+  /* background-color: blueviole; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  font-size: 5vw;
+  font-weight: 700;
+  color: #fff;
+}
+.nav_item {
+  display: flex;
+  align-items: center;
+}
+.nav_item a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2vw;
+}
+
+.btnlogo {
+  height: 40px;
+  width: 5em;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 2vw;
+  transition: 0.5s; /* margin-left: 2vw; */
+}
+.btnlogo:hover {
+  background-color: #fff;
+  color: #162938;
+}
+/* @media (max-width:600px) {
+   
+    
+} */
+
+.container {
+  position: relative;
+
+  min-height: 100px;
+  min-width: 200px;
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  /* border-radius: 20px; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, height 0.2s ease;
+  overflow: hidden;
+  transform: scale(0);
+}
+.container {
+  transform: scale(1);
+}
+
+.container.active {
+  height: 520px;
+}
+.container .iconclose {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+  background-color: #162938;
+  font-size: 1.5em;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom-left-radius: 20px; */
+  cursor: pointer;
+  z-index: 1;
+}
+
+.container .form_box {
+  min-width: 100%;
+  padding: 40px;
+}
+.container .form_box.login {
+  /* display: none;  */
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+.container.active .form_box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+.container.active .form_box.register {
+  transition: transform 0.2s ease;
+  transform: translateX(0px);
+}
+.container .form_box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+.form_box h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #162938;
+}
+.inputbox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0px;
+}
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1em;
+  /* transform: translateY(-50%);  */
+  pointer-events: none;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+/* .inputbox input :focus~label,
+.inputbox input:valid~label{
+    top:-5px;
+}  */
+.inputbox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  color: black;
+  font-weight: 500;
+  padding-right: 2.2em;
+}
+.inputbox .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 40px;
+}
+.remember-forget {
+  font-size: 0.9em;
+  color: black;
+  margin: 5px 0px 15px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.remember-forget label input {
+  color: whitesmoke;
+  margin-right: 3px;
+}
+.remember-forget a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  color: white;
+  border: 2px solid wheat;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+.signin-link {
+  margin: 30px 0px 5px;
+  text-align: center;
+}
+.signin-link p a {
+  text-decoration: none;
+  color: #162938;
+  font-weight: 600;
+}
+.signin-link p a:hover {
+  text-decoration: underline;
+}
