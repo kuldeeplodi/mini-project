@@ -1,3 +1,43 @@
+import { Products, newlyLaunchShoes } from "../data/Products.js";
+
+
+let  proShoesHTMl = "";
+let  newlyLaunchShoesHTML = ""
+
+Products.forEach((Product) =>{
+  proShoesHTMl += 
+  `
+     <div class="pro">
+          <img src="${Product.image}"/>
+          <div class="des">
+            <span>${Product.name}</span>
+            <h5>High Quality Shoes</h5>
+             <img class="product-rating stars" src="images/rating/rating-${Product.rating * 10}.png">
+            <h4>RS ${Product.price}</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  `
+});
+newlyLaunchShoes.forEach((Product) => {
+  newlyLaunchShoesHTML +=
+    `
+     <div class="pro">
+          <img src="${Product.image}"/>
+          <div class="des">
+            <span>${Product.name}</span>
+            <h5>High Quality Shoes</h5>
+             <img class="product-rating stars" src="images/rating/rating-${Product.rating * 10}.png">
+            <h4>RS ${Product.price}</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  `
+});
+
+document.querySelector(".js-shoes-container").innerHTML = proShoesHTMl ; 
+document.querySelector(".js-newlyLaunchShoes-container").innerHTML = newlyLaunchShoesHTML ; 
+
 const wrapper = document.querySelector(".sliderWrapper");
 const menuItems = document.querySelectorAll(".menuItem");
 
