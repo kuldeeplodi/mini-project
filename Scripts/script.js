@@ -1,3 +1,26 @@
+import { Products } from "../data/Products.js";
+
+
+let  proShoesHTMl = "";
+
+Products.forEach((Product) =>{
+  proShoesHTMl += 
+  `
+     <div class="pro">
+          <img src="${Product.image}"/>
+          <div class="des">
+            <span>${Product.name}</span>
+            <h5>High Quality Shoes</h5>
+             <img class="product-rating stars" src="images/rating/rating-${Product.rating * 10}.png">
+            <h4>RS 299</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  `
+});
+
+document.querySelector(".js-shoes-container").innerHTML = proShoesHTMl ; 
+
 const wrapper = document.querySelector(".sliderWrapper");
 const menuItems = document.querySelectorAll(".menuItem");
 
