@@ -1,5 +1,23 @@
 import { Products, newlyLaunchShoes } from "../data/Products.js";
 
+const url = 'https://shoes-collections.p.rapidapi.com/shoes';
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '32ba392c97msh6f3aacfb9a1ae72p174f91jsn07486aed4c06',
+    'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com'
+  }
+};
+
+try {
+  const response = await fetch(url, options);
+  const Products = await response.json();
+  console.log(Products);
+  console.log(Products[0]);
+} catch (error) {
+  console.error(error);
+}
+
 
 let  proShoesHTMl = "";
 let  newlyLaunchShoesHTML = ""
