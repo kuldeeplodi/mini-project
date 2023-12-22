@@ -1,4 +1,3 @@
-const SneaksAPI = require('sneaks-api');
 import { newlyLaunchShoes, shoesProducts } from "../data/Products.js";
 
 const SneaksAPI = require('sneaks-api');
