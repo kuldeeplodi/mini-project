@@ -546,6 +546,9 @@ justify-content: center; */
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 5px;
   transition: 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 #product1 .pro:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
@@ -567,6 +570,10 @@ justify-content: center; */
   margin: 3px 0;
   font-size: 14px;
   color: #1a1a1a;
+  width: 16rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #product1 .pro .des i {
   font-size: 12px;

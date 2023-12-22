@@ -1,9 +1,5 @@
 import { newlyLaunchShoes, shoesProducts } from "../data/Products.js";
 
-const SneaksAPI = require('sneaks-api');
-const sneaks = new SneaksAPI();
-console.log(sneaks);
-
 let  proShoesHTMl = "";
 let  newlyLaunchShoesHTML = ""
 
