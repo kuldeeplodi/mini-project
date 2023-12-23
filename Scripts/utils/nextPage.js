@@ -1,4 +1,14 @@
-export function nextPageFunction(newProducts,shoesDetails){
+export function nextPageFunction(shoes){
+  shoes.forEach(shoes => {
+    shoes.addEventListener('click', () => {
+      window.location.href = "singlepro.html"
+      console.log("done");
+    })
+  });
+
+}
+
+export function nextPageFunction(newProducts){
     let nextShopHTML = "";
     newProducts.forEach((Product) => {
         nextShopHTML +=
@@ -15,7 +25,5 @@ export function nextPageFunction(newProducts,shoesDetails){
       </div>
   `
     });
-    shoesDetails = document.querySelectorAll(".pro");
-    console.log(shoesDetails);
     return nextShopHTML;
 }

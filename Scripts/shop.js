@@ -30,6 +30,8 @@ shoesDetails = document.querySelectorAll(".pro");
 onsecondPage.addEventListener('click',()=>{
   document.querySelector(".js-allShoes-container").innerHTML.remove ;
   document.querySelector(".js-allShoes-container").innerHTML = nextPageFunction(allProducts);
+  shoesDetails = document.querySelectorAll(".pro");
+  console.log(shoesDetails);
 });
 
 onThirdPage.addEventListener('click',()=>{
@@ -39,13 +41,7 @@ onThirdPage.addEventListener('click',()=>{
   console.log(shoesDetails);
 });
 
-shoesDetails.forEach(shoes => {
-  shoes.addEventListener('click',()=>{
-    window.location.href = "singlepro.html"
-    console.log("done");
-  })
-});
-
+shoesDetails
 let Bar = document.getElementById("bar");
 let CLOSE = document.getElementById("close");
 let Nav = document.getElementById("navbar");
