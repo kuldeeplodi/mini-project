@@ -37,7 +37,9 @@ onsecondPage.addEventListener('click',()=>{
 onThirdPage.addEventListener('click',()=>{
   document.querySelector(".js-allShoes-container").innerHTML.remove ;
   document.querySelector(".js-allShoes-container").innerHTML = nextPageFunction(babyShoes);
-  shoesDetails = document.querySelectorAll(".pro");
+  shoesDetails = 
+
+document.querySelectorAll(".pro");
   console.log(shoesDetails);
 });
 
